@@ -1,0 +1,60 @@
+.btn__main {
+  display: inline-flex;
+  background-color: #fff;
+  align-items: center;
+  justify-content: center;
+  border-radius: 60rem;
+  height: 3rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  transition: cubic-bezier(0.23, 1, 0.32, 1) all 0.3s;
+
+  &.green {
+    background-color: $primary;
+    transition: cubic-bezier(0.23, 1, 0.32, 1) all 0.3s;
+  }
+
+  span {
+    color: #000;
+    font-family: $family-secondary;
+    font-size: 1rem;
+    font-weight: 700;
+    transition: cubic-bezier(0.23, 1, 0.32, 1) all 0.3s;
+  }
+
+  &:hover {
+    background-color: $primary;
+
+    span {
+      color: #000;
+    }
+
+    &.green {
+      background-color: #000;
+
+      span {
+        color: #fff;
+      }
+    }
+  }
+}
+
+.more__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.87rem;
+  transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) all 0.3s;
+
+  span {
+    color: #000;
+    font-family: $family-secondary;
+    font-size: 1rem;
+    font-weight: 700;
+    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) all 0.3s;
+  }
+
+  &:hover {
+    gap: 0.4rem;
+  }
+}

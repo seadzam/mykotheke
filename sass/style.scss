@@ -1,0 +1,90 @@
+/*!
+Theme Name: MyKotheke
+Theme URI: http://underscores.me/
+Author: EPIFRONT
+Author URI: http://www.epifront.com
+Description: WooCommerce custom theme
+Version: 1.0.0
+Tested up to: 5.4
+Requires PHP: 5.6
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: mykotheke
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+*/
+
+@charset "utf-8";
+@import "../node_modules/bulma/sass/utilities/initial-variables";
+@import "../node_modules/bulma/sass/utilities/functions";
+// Colors
+$primary: #bfe350;
+$secondary: #000000;
+$black: #161b25;
+
+// Fonts
+$family-primary: "Inter", sans-serif;
+$family-secondary: "Dosis", sans-serif;
+$title-family: $family-secondary;
+$title-weight: 400;
+
+// Function
+@function crem($value) {
+  $remValue: ($value / $body-size) + rem;
+  @return $remValue;
+}
+
+@import "../node_modules/bulma/bulma.sass";
+@import "./Global/header";
+@import "./Global/footer";
+@import "./Global/buttons";
+@import "./Global/products";
+@import "./Global/glide";
+@import "./Pages/homepage";
+@import "./Pages/page";
+@import "./Pages/checkout";
+
+::-moz-selection {
+  color: #000000;
+  background: $primary;
+}
+
+::selection {
+  color: #000000;
+  background: $primary;
+}
+
+html {
+  scroll-behavior: smooth;
+
+  @include mobile {
+    font-size: 14px;
+  }
+  @include tablet {
+    font-size: 14px;
+  }
+  @include desktop {
+    font-size: 12px;
+  }
+  @include widescreen {
+    font-size: 14px;
+  }
+  @include fullhd {
+    font-size: 16px;
+  }
+}
+
+button,
+a {
+  &:focus {
+    box-shadow: none !important;
+  }
+}
+
+.page__wrap {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+  overflow-x: hidden;
+
+  @include touch {
+    padding-top: 6rem;
+  }
+}
